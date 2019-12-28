@@ -1,4 +1,7 @@
-const eventsBase = 'https://cocktails-application-server.herokuapp.com/events';
+const eventsBase = '/img/events';
+const bartendersBase = '/img/bartenders';
+const blogPostsBase = '/img/blog-post';
+const instagramBase = '/img/instagram';
 
 let normalizeCocktails = [
     {
@@ -1776,7 +1779,466 @@ let normalizeEvents = [
     }
 ];
 
+let normalizeUsers = [
+    {
+        id: "94578d0f-b1c9-4491-8920-37965a854fc0",
+        name: "Wilma",
+        surname: "Leapman",
+        email: "wilmaLeapman@gmail.com"
+    },
+    {
+        id: "42d33a37-f7fa-4116-bee4-34c4eea1bbd6",
+        name: "Daisy",
+        surname: "Willis",
+        email: "daisyWillis@gmail.com"
+    },
+    {
+        id: "46bab878-f721-44d5-92e9-0f8024836e42",
+        name: "Will",
+        surname: "Smith",
+        email: "willSmith@gmail.com"
+    },
+    {
+        id: "3936b9c8-b6eb-4cb2-8e6e-a948d748a486",
+        name: "Sophie",
+        surname: "Terner",
+        email: "sophieTerner@gmail.com"
+    },
+    {
+        id: "23e25ae4-2804-4a64-b20d-113a3740c3da",
+        name: "Jack",
+        surname: "Sparrow",
+        email: "jackSparrow@gmail.com"
+    },
+    {
+        id: "0d566f1d-27f5-43e5-b92b-3f424ed6e7fd",
+        name: "Martin",
+        surname: "Iden",
+        email: "martinIden@gmail.com"
+    },
+    {
+        id: "9df00051-aba8-4b99-94e7-0fda25fc2056",
+        name: "Kristin",
+        surname: "Stevart",
+        email: "kristinStevart@gmail.com"
+    },
+    {
+        id: "b83be7ae-8fde-4ce5-963f-937a26bd310b",
+        name: "Carla",
+        surname: "Williams",
+        email: "carlaWilliams@gmail.com"
+    },
+    {
+        id: "6d02405f-48de-409c-90ae-8c817f1c551c",
+        name: "Catherine",
+        surname: "Edwards",
+        email: "catherineEdwards@gmail.com"
+    },
+    {
+        id: "dfb982e9-b432-4b7d-aec6-7f6ff2e6af54",
+        name: "Dexter",
+        surname: "Round",
+        email: "dexterRound@gmail.com"
+    },
+    {
+        id: "a21b9e92-4a98-475a-86d2-c569d4bbe823",
+        name: "Joanna",
+        surname: "Kingsman",
+        email: "joannaKingsman@gmail.com"
+    },
+    {
+        id: "b3498b0a-5ec4-4564-bda4-012b340bb6d9",
+        name: "Matthew",
+        surname: "Turner",
+        email: "matthewTurner@gmail.com"
+    },
+    {
+        id: "9e6c1a98-ce9f-49bc-b7d6-457e34452d26",
+        name: "Roger",
+        surname: "Gill",
+        email: "rogerGill@gmail.com"
+    },
+    {
+        id: "e9d1351a-f32f-4d6a-b32c-8c093fb3e2de",
+        name: "Sarah",
+        surname: "Blare",
+        email: "sarahBlare@gmail.com"
+    },
+    {
+        id: "3d35625c-7fe7-4b92-9c34-75909deda888",
+        name: "Vivien",
+        surname: "Archibald",
+        email: "vivienArchibald@gmail.com"
+    }
+];
+
+let normalizeReviews = [
+    {
+        id: "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+        userId: "94578d0f-b1c9-4491-8920-37965a854fc0",
+        date: "2019-12-17",
+        likes: 177,
+        dislikes: 15,
+        text: "or sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspicitationem ipsam iusto laborum, missimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspicitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iustoagnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "a89357c5-5228-4ff8-8026-45776be4d916",
+        userId: "42d33a37-f7fa-4116-bee4-34c4eea1bbd6",
+        date: "2020-01-17",
+        likes: 10,
+        dislikes: 59,
+        text: "ates!Lotationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "204a7413-fc93-4a32-8e3a-0dc29e943686",
+        userId: "46bab878-f721-44d5-92e9-0f8024836e42",
+        date: "2019-11-14",
+        likes: 32,
+        dislikes: 37,
+        text: "utem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "e8a3f521-4080-4fb6-9099-abfde8d8f12a",
+        userId: "3936b9c8-b6eb-4cb2-8e6e-a948d748a486",
+        date: "2019-05-01",
+        likes: 7,
+        dislikes: 1,
+        text: "orem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis o",
+    },
+    {
+        id: "0e8b190e-6b6b-48c6-a8f6-4791c2ad2768",
+        userId: "23e25ae4-2804-4a64-b20d-113a3740c3da",
+        date: "2020-01-17",
+        likes: 150,
+        dislikes: 15,
+        text: "citationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusai corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exerci corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercmus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "d8f529e8-1b8b-46f1-ac29-6f5f44cbe3a3",
+        userId: "0d566f1d-27f5-43e5-b92b-3f424ed6e7fd",
+        date: "2019-10-01",
+        likes: 317,
+        dislikes: 5,
+        text: "sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatpsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "418cb074-d5b9-4e29-8863-63d6e843f6a8",
+        userId: "9df00051-aba8-4b99-94e7-0fda25fc2056",
+        date: "2020-01-01",
+        likes: 85,
+        dislikes: 6,
+        text: "metLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto labormet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam imet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam ium, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "f96b476a-0966-425d-90b9-94179fe77897",
+        userId: "b83be7ae-8fde-4ce5-963f-937a26bd310b",
+        date: "2020-01-17",
+        likes: 7,
+        dislikes: 3,
+        text: "No luptates!Lorem iprum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "8e35eb51-2f4f-434f-9795-8654c33662d0",
+        userId: "6d02405f-48de-409c-90ae-8c817f1c551c",
+        date: "2019-07-17",
+        likes: 11,
+        dislikes: 15,
+        text: "nissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "5a82e7fc-2fde-4c55-8a65-831c2775954e",
+        userId: "dfb982e9-b432-4b7d-aec6-7f6ff2e6af54",
+        date: "2019-06-11",
+        likes: 19,
+        dislikes: 1,
+        text: "ipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "baaf3731-f476-4315-a6ae-f044defd3526",
+        userId: "a21b9e92-4a98-475a-86d2-c569d4bbe823",
+        date: "2019-02-11",
+        likes: 7,
+        dislikes: 16,
+        text: "Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur vum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "66942dd0-9a17-4f36-a28e-5706a5015e80",
+        userId: "b3498b0a-5ec4-4564-bda4-012b340bb6d9",
+        date: "2019-11-11",
+        likes: 18,
+        dislikes: 11,
+        text: "em ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem tionem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "db615b8c-4205-4f80-a01a-d18e6bf70189",
+        userId: "9e6c1a98-ce9f-49bc-b7d6-457e34452d26",
+        date: "2019-12-31",
+        likes: 27,
+        dislikes: 0,
+        text: "tem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis ququas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis ququas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis ququas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis ququas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicint amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    },
+    {
+        id: "14f9164b-5066-4d2b-abee-46ff1630c6cf",
+        userId: "e9d1351a-f32f-4d6a-b32c-8c093fb3e2de",
+        date: "2019-09-30",
+        likes: 33,
+        dislikes: 0,
+        text: "ptaLore ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi o",
+    },
+    {
+        id: "451b8d52-27c3-4f42-bc49-9dbb680feabf",
+        userId: "3d35625c-7fe7-4b92-9c34-75909deda888",
+        date: "2020-01-17",
+        likes: 37,
+        dislikes: 2,
+        text: "elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi co",
+    }
+];
+
+let normalizeBartenders = [
+    {
+        id: "d75f762a-eadd-49be-8918-ed0daa8dd024",
+        name: "Bruce",
+        surname: "Robertson",
+        img: `${bartendersBase}/bartender-0.jpg`,
+        email: "bruceRobertson@gmail.com"
+    },
+    {
+        id: "c3cb8f92-a2ed-4716-92a1-b6ea813e9049",
+        name: "Jane",
+        surname: "Smith",
+        img: `${bartendersBase}/bartender-1.jpg`,
+        email: "janeSmith@gmail.com"
+    },
+    {
+        id: "bd129641-c0eb-432b-84b6-8b81d2930358",
+        name: "Amanda",
+        surname: "Brian",
+        img: `${bartendersBase}/bartender-2.jpg`,
+        email: "amandaBrian@gmail.com"
+    },
+    {
+        id: "5909796d-5030-4e36-adec-68b8f9ec2d96",
+        name: "Allan",
+        surname: "Butler",
+        img: `${bartendersBase}/bartender-3.jpg`,
+        email: "allanButler@gmail.com"
+    },
+    {
+        id: "429dea85-11dd-4054-a31e-c60c92e17255",
+        name: "Alison",
+        surname: "Black",
+        img: `${bartendersBase}/bartender-4.jpg`,
+        email: "alisonBlack@gmail.com"
+    },
+    {
+        id: "bb8afbec-2fec-491f-93e9-7f13950dd80b",
+        name: "Daisy",
+        surname: "Nail",
+        img: `${bartendersBase}/bartender-5.jpg`,
+        email: "daisyNail@gmail.com"
+    },
+];
+
+let normalizeBlogPosts = [
+    {
+        id: "5909796d-5030-4e36-adec-68b8f9ec2d96",
+        userId: "94578d0f-b1c9-4491-8920-37965a854fc0",
+        title: "Private parties from 20 to 50 guests",
+        img: `${blogPostsBase}/blog-post-item-1.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-11-25T07:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "a89357c5-5228-4ff8-8026-45776be4d916",
+            "204a7413-fc93-4a32-8e3a-0dc29e943686",
+            "e8a3f521-4080-4fb6-9099-abfde8d8f12a",
+            "0e8b190e-6b6b-48c6-a8f6-4791c2ad2768",
+            "d8f529e8-1b8b-46f1-ac29-6f5f44cbe3a3",
+            "418cb074-d5b9-4e29-8863-63d6e843f6a8",
+            "f96b476a-0966-425d-90b9-94179fe77897",
+            "8e35eb51-2f4f-434f-9795-8654c33662d0",
+            "5a82e7fc-2fde-4c55-8a65-831c2775954e",
+            "baaf3731-f476-4315-a6ae-f044defd3526",
+            "66942dd0-9a17-4f36-a28e-5706a5015e80",
+            "db615b8c-4205-4f80-a01a-d18e6bf70189",
+            "14f9164b-5066-4d2b-abee-46ff1630c6cf",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "a304959a-76c0-4b34-954a-b38dbf310360",
+        userId: "42d33a37-f7fa-4116-bee4-34c4eea1bbd6",
+        title: "Every evening beer parties from 10pm to 12pm",
+        img: `${blogPostsBase}/blog-post-item-2.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-10-12T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "14f9164b-5066-4d2b-abee-46ff1630c6cf",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "429dea85-11dd-4054-a31e-c60c92e17255",
+        userId: "46bab878-f721-44d5-92e9-0f8024836e42",
+        title: "Private parties only for major people",
+        img: `${blogPostsBase}/blog-post-item-3.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-09-15T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet?",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "a89357c5-5228-4ff8-8026-45776be4d916",
+            "204a7413-fc93-4a32-8e3a-0dc29e943686",
+            "e8a3f521-4080-4fb6-9099-abfde8d8f12a",
+            "0e8b190e-6b6b-48c6-a8f6-4791c2ad2768",
+            "db615b8c-4205-4f80-a01a-d18e6bf70189",
+            "14f9164b-5066-4d2b-abee-46ff1630c6cf",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "dfb982e9-b432-4b7d-aec6-7f6ff2e6af54",
+        userId: "3936b9c8-b6eb-4cb2-8e6e-a948d748a486",
+        title: "Private parties from 20 to 50 guests",
+        img: `${blogPostsBase}/blog-post-item-1.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-07-27T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "0e8b190e-6b6b-48c6-a8f6-4791c2ad2768",
+            "d8f529e8-1b8b-46f1-ac29-6f5f44cbe3a3",
+            "418cb074-d5b9-4e29-8863-63d6e843f6a8",
+            "f96b476a-0966-425d-90b9-94179fe77897",
+            "8e35eb51-2f4f-434f-9795-8654c33662d0",
+            "5a82e7fc-2fde-4c55-8a65-831c2775954e",
+            "baaf3731-f476-4315-a6ae-f044defd3526",
+            "66942dd0-9a17-4f36-a28e-5706a5015e80",
+            "db615b8c-4205-4f80-a01a-d18e6bf70189"
+        ]
+    },
+    {
+        id: "53b642d7-5e86-4717-a466-0640a1dee076",
+        userId: "23e25ae4-2804-4a64-b20d-113a3740c3da",
+        title: "Every evening beer parties from 10pm to 12pm",
+        img: `${blogPostsBase}/blog-post-item-2.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-12-07T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "a89357c5-5228-4ff8-8026-45776be4d916",
+            "14f9164b-5066-4d2b-abee-46ff1630c6cf",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "20bed9b5-9c7b-4771-8221-75b74ed1904a",
+        userId: "0d566f1d-27f5-43e5-b92b-3f424ed6e7fd",
+        title: "Private parties only for major people",
+        img: `${blogPostsBase}/blog-post-item-3.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-12-30T07:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "a89357c5-5228-4ff8-8026-45776be4d916",
+            "204a7413-fc93-4a32-8e3a-0dc29e943686",
+            "e8a3f521-4080-4fb6-9099-abfde8d8f12a",
+            "0e8b190e-6b6b-48c6-a8f6-4791c2ad2768",
+            "d8f529e8-1b8b-46f1-ac29-6f5f44cbe3a3",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "e90397e6-0fe3-44b1-8fec-ccd40dc724d9",
+        userId: "94578d0f-b1c9-4491-8920-37965a854fc0",
+        title: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+        img: `${blogPostsBase}/blog-post-item-1.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-11-11T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnispersconsectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "a89357c5-5228-4ff8-8026-45776be4d916",
+            "204a7413-fc93-4a32-8e3a-0dc29e943686",
+            "14f9164b-5066-4d2b-abee-46ff1630c6cf",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "9085f57b-ec29-4226-a4d2-da9b8608c20e",
+        userId: "42d33a37-f7fa-4116-bee4-34c4eea1bbd6",
+        title: "Every evening beer parties from 10pm to 12pm",
+        img: `${blogPostsBase}/blog-post-item-2.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-11-07T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnamiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "14f9164b-5066-4d2b-abee-46ff1630c6cf",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "c9ee8cb3-e422-4750-ba54-3cb9b71f01b4",
+        userId: "46bab878-f721-44d5-92e9-0f8024836e42",
+        title: "Private parties only for major people",
+        img: `${blogPostsBase}/blog-post-item-3.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-10-15T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet?",
+        reviews: [
+            "660c8f02-ad3b-43d3-b997-3f5cf072b78b",
+            "a89357c5-5228-4ff8-8026-45776be4d916",
+            "204a7413-fc93-4a32-8e3a-0dc29e943686",
+            "451b8d52-27c3-4f42-bc49-9dbb680feabf"
+        ]
+    },
+    {
+        id: "a295b63a-095d-4299-bcbf-f424fb45ab31",
+        userId: "3936b9c8-b6eb-4cb2-8e6e-a948d748a486",
+        title: "Private parties from 20 to 50 guests",
+        img: `${blogPostsBase}/blog-post-item-1.jpg`,
+        asideImg: `${blogPostsBase}/aside-blog-post-1.jpg`,
+        bigImg: `${blogPostsBase}/big-blog-post-1.jpg`,
+        date: "2019-10-22T05:00",
+        text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit ametLorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, autem commodi corporis cumdignissimos eligendi eveniet excepturi, exercitationem ipsam iusto laborum, magnam nemo nulla omnisperspiciatis quas reprehenderit tenetur voluptates!Lorem ipsum dolor sit amet",
+        reviews: [
+            "66942dd0-9a17-4f36-a28e-5706a5015e80",
+            "db615b8c-4205-4f80-a01a-d18e6bf70189"
+        ]
+    },
+];
+
+let instagram = [
+    `${instagramBase}/instagram-1.jpg`,
+    `${instagramBase}/instagram-1-copy.jpg`,
+    `${instagramBase}/instagram-2.jpg`,
+    `${instagramBase}/instagram-2-copy.jpg`,
+    `${instagramBase}/instagram-3.jpg`,
+    `${instagramBase}/instagram-3-copy.jpg`,
+];
+
 module.exports = {
     cocktails: normalizeCocktails,
-    events: normalizeEvents
+    events: normalizeEvents,
+    users: normalizeUsers,
+    reviews: normalizeReviews,
+    bartenders: normalizeBartenders,
+    blogPosts: normalizeBlogPosts,
+    instagram
 };
